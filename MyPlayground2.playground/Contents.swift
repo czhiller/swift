@@ -90,21 +90,37 @@ print(numerosDeTelefonoExplicito["carlos"])
 var nombre = "Carolina"
 var segundoNombre: String? //se inicializa directamente con nil, asi que da igual ponerle = nil
 var apellido = "Zapata"
-
-if let elValorDelSegNombre = segundoNombre {
-    print(elValorDelSegNombre)
-    print(segundoNombre)
-}
-
-
+segundoNombre = "NoTengoSegundoNombre"
 print("-----------")
+
+print(nombre.count)
+
+
+
+print(segundoNombre?.count)
+
 //segundoNombre = "noTieneSegundoNombre"
 //print(nombre + " " + segundoNombre! + " " + apellido)
 print("-----------")
 
+//un valor obtenido del diccionario o de un arreglo siempre es opcional
+//nil es el nuevo null
 
+if segundoNombre != nil {
+    print (segundoNombre!) //forma incorrecta de desenvolver -unwrap- un opcional
+}
 
+print(segundoNombre)
 
+if let elValorDelSegNombre = segundoNombre { // forma correcta de unwrapear la variable opcional
+    print(elValorDelSegNombre)
+}
+
+numerosDeTelefonoExplicito["mari"]?.advanced(by: 10) //le suma 10 al valor q obtiene del mapa
+numerosDeTelefonoExplicito["maria"]?.advanced(by: 10)
+
+var resSuma = numerosDeTelefonoExplicito["mara"]?.advanced(by: 10) ?? 10 // ?? actua como default, si el valor viene en nil le suma 10 igual, en este caso la variable resSuma deja de ser opcional. Ver descripcion con alt+click
+var resSuma2 = (numerosDeTelefonoExplicito["maria"] ?? 0).advanced(by: 10) //esto es lo mismo q lo de arriba, con diferente sintaxis
 
 
 
