@@ -21,7 +21,7 @@ saludar()
 
 //clases:
 
-public class Persona{
+public class Persona: Equatable{
     
     private var nombre: String
     private var apellido: String
@@ -40,6 +40,9 @@ public class Persona{
         return nombre
     }
     
+    public static func ==(lhs: Persona, rhs: Persona) -> Bool {
+        return lhs.nombre == rhs.nombre
+    }
 }
 
 var p: Persona = Persona(nombre: "Caro", apellido: "Zapata")
@@ -104,6 +107,12 @@ print(clark.presentarse())
 
 clark.volar()
 clark.volarEnReversa()
+
+var bruno = Superheroe(nombre: "Batman", apellido: "meh")
+
+if bruno != clark {
+    print("son diferentes")
+}
 
 
 
