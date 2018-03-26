@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         print ("El usuario escribio: \(texto!)")
         theLabel?.text = texto
         theLabel.backgroundColor = UIColor.lightGray
+        view.backgroundColor = UIColor.red
     }
     
     
