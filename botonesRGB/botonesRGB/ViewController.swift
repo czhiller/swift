@@ -35,12 +35,20 @@ class ViewController: UIViewController {
         //instancio la pantalla a la que quiero ir
         //el id que tengo que usar se define en el storyboard (en mi nuevo ViewController) como storyboardId
         //le pongo ! porque ya se que existen storyboards
-        var nextScreen = storyboard!.instantiateViewController(withIdentifier: "GreenViewController")
-        
+        var nextScreen = storyboard!.instantiateViewController(withIdentifier: "GreenViewController") as! GreenViewController
+        //nextScreen.view.backgroundColor = sender.backgroundColor
+        nextScreen.myText = sender.currentTitle
+        nextScreen.myColor = sender.backgroundColor
         //presento la nueva pantalla
         //indicamos cual es la pantalla a presentar, si tiene animacion y el ultimo parametro lo dejamos en nil por ahora
         present(nextScreen, animated: true, completion: nil)
     
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CyanViewController{
+            destination.myText = "Cyan"
+        }
     }
     
 }

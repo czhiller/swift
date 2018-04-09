@@ -1,5 +1,5 @@
 //
-//  GreenViewController.swift
+//  CyanViewController.swift
 //  botonesRGB
 //
 //  Created by iOS on 9/4/18.
@@ -8,27 +8,17 @@
 
 import UIKit
 
-class GreenViewController: UIViewController {
-
+class CyanViewController: UIViewController {
+    
     @IBOutlet weak var theLabel: UILabel!
     
     var myText: String?
-    var myColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("APARECE LA PANTALLA VERDE")
-        // Do any additional setup after loading the view.
         theLabel.text = myText
-        view.backgroundColor = myColor
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        print("**DES**APARECE LA PANTALLA VERDE")
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,9 +34,5 @@ class GreenViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func goBack(_ sender: Any) {
-        //desaparezco pantalla actual
-        dismiss(animated: true, completion: nil)
-    }
-    
+
 }
