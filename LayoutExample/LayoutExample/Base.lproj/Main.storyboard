@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LayoutExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBd-RT-11y">
+                                <rect key="frame" x="20" y="617" width="31" height="30"/>
+                                <state key="normal" title="Prev"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MFT-Yx-2B8">
+                                <rect key="frame" x="139" y="323.5" width="97.5" height="20.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qJ8-vI-wMp">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola Mundo!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-Wd-Nt0">
+                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="g4g-Wd-Nt0" firstAttribute="centerX" secondItem="qJ8-vI-wMp" secondAttribute="centerX" id="ERh-HF-mWC"/>
+                                            <constraint firstItem="g4g-Wd-Nt0" firstAttribute="centerY" secondItem="qJ8-vI-wMp" secondAttribute="centerY" id="KCa-Zk-eWT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-dE-z2Y">
+                                <rect key="frame" x="323" y="617" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yorkie" translatesAutoresizingMaskIntoConstraints="NO" id="q2S-Ov-epP">
+                                <rect key="frame" x="0.0" y="19.5" width="375" height="284"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="vIb-bv-qJd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BBd-RT-11y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1IH-tx-98i"/>
+                            <constraint firstItem="q2S-Ov-epP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" priority="750" id="2rm-nu-obZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BBd-RT-11y" secondAttribute="bottom" constant="20" id="4xt-pZ-920"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yUv-dE-z2Y" secondAttribute="trailing" constant="20" id="8mW-bp-sUh"/>
+                            <constraint firstItem="q2S-Ov-epP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W5H-yH-Rch"/>
+                            <constraint firstItem="q2S-Ov-epP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zwr-fO-mzp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yUv-dE-z2Y" secondAttribute="bottom" constant="20" id="iMJ-mE-avh"/>
+                            <constraint firstItem="MFT-Yx-2B8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nWK-gZ-keB"/>
+                            <constraint firstItem="MFT-Yx-2B8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ocl-Oa-dMO"/>
+                            <constraint firstItem="q2S-Ov-epP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="qYr-fj-0al"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="yorkie" width="284" height="284"/>
+    </resources>
+</document>
