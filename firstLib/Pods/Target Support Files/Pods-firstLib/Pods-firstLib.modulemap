@@ -1,0 +1,6 @@
+framework module Pods_firstLib {
+  umbrella header "Pods-firstLib-umbrella.h"
+
+  export *
+  module * { export * }
+}
