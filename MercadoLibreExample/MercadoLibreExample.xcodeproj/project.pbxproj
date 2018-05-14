@@ -15,6 +15,7 @@
 		812C21C420A9C6D700B19442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812C21C220A9C6D700B19442 /* Main.storyboard */; };
 		812C21C620A9C6D700B19442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812C21C520A9C6D700B19442 /* Assets.xcassets */; };
 		812C21C920A9C6D700B19442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812C21C720A9C6D700B19442 /* LaunchScreen.storyboard */; };
+		81363D4620A9E2AA00984CC3 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81363D4520A9E2AA00984CC3 /* ProductTableViewCell.swift */; };
 		81FC948720A9D54000B52AB9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC948620A9D54000B52AB9 /* Product.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		812C21C520A9C6D700B19442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		812C21C820A9C6D700B19442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		812C21CA20A9C6D700B19442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81363D4520A9E2AA00984CC3 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		81FC948620A9D54000B52AB9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DA096FA32843282AA199DD84 /* Pods-MercadoLibreExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLibreExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLibreExample/Pods-MercadoLibreExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				8112DEB420A9CB500062D9F3 /* ProductsTableViewController.swift */,
 				8112DEB620A9D4A40062D9F3 /* MercadoLibreApiDAO.swift */,
 				81FC948620A9D54000B52AB9 /* Product.swift */,
+				81363D4520A9E2AA00984CC3 /* ProductTableViewCell.swift */,
 			);
 			path = MercadoLibreExample;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				81FC948720A9D54000B52AB9 /* Product.swift in Sources */,
 				8112DEB720A9D4A40062D9F3 /* MercadoLibreApiDAO.swift in Sources */,
 				812C21BF20A9C6D700B19442 /* AppDelegate.swift in Sources */,
+				81363D4620A9E2AA00984CC3 /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
