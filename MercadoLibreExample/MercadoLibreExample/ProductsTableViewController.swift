@@ -7,22 +7,31 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductsTableViewController: UITableViewController {
     
     var query: String?
+    private var products: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(query ?? "")
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if let queryValue = query {
+            
+        
+        let dao = MercadoLibreApiDAO()
+            dao.getProducts(query: queryValue) {
+                (products) in
+                self.products = products
+                self.tableView.reloadData()
+            }
+        
+        }
+        
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,23 +41,28 @@ class ProductsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return products.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
 
-        // Configure the cell...
-
+        let product = products[indexPath.row]
+        cell.textLabel?.text = product.title
+        cell.detailTextLabel?.text = "\(product.price) \(product.currency)"
+        
+        let thumbnailURL = URL(string: product.thumbnail)
+        cell.imageView?.kf.setImage(with: thumbnailURL)
+        
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
