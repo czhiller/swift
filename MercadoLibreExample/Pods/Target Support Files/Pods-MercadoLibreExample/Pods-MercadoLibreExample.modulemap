@@ -1,0 +1,6 @@
+framework module Pods_MercadoLibreExample {
+  umbrella header "Pods-MercadoLibreExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
